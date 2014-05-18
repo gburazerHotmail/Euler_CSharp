@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61558932-8223-4B75-AD55-E19E43063068}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Euler</RootNamespace>
+    <AssemblyName>Euler</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Euler.cs" />
+    <Compile Include="Fraction.cs" />
+    <Compile Include="Solutions\Euler001.cs" />
+    <Compile Include="Solutions\Euler002.cs" />
+    <Compile Include="Solutions\Euler003.cs" />
+    <Compile Include="Solutions\Euler004.cs" />
+    <Compile Include="Solutions\Euler005.cs" />
+    <Compile Include="Solutions\Euler006.cs" />
+    <Compile Include="Solutions\Euler007.cs" />
+    <Compile Include="Solutions\Euler008.cs" />
+    <Compile Include="Solutions\Euler009.cs" />
+    <Compile Include="Solutions\Euler010.cs" />
+    <Compile Include="Solutions\Euler011.cs" />
+    <Compile Include="Solutions\Euler012.cs" />
+    <Compile Include="Solutions\Euler013.cs" />
+    <Compile Include="Solutions\Euler014.cs" />
+    <Compile Include="Solutions\Euler015.cs" />
+    <Compile Include="Solutions\Euler016.cs" />
+    <Compile Include="Solutions\Euler017.cs" />
+    <Compile Include="Solutions\Euler018.cs" />
+    <Compile Include="Solutions\Euler019.cs" />
+    <Compile Include="Solutions\Euler020.cs" />
+    <Compile Include="Solutions\Euler021.cs" />
+    <Compile Include="Solutions\Euler022.cs" />
+    <Compile Include="Solutions\Euler023.cs" />
+    <Compile Include="Solutions\Euler024.cs" />
+    <Compile Include="Solutions\Euler025.cs" />
+    <Compile Include="Solutions\Euler026.cs" />
+    <Compile Include="Solutions\Euler027.cs" />
+    <Compile Include="Solutions\Euler028.cs" />
+    <Compile Include="Solutions\Euler029.cs" />
+    <Compile Include="Solutions\Euler030.cs" />
+    <Compile Include="Solutions\Euler031.cs" />
+    <Compile Include="Solutions\Euler032.cs" />
+    <Compile Include="Solutions\Euler033.cs" />
+    <Compile Include="Solutions\Euler034.cs" />
+    <Compile Include="Solutions\Euler035.cs" />
+    <Compile Include="Solutions\Euler036.cs" />
+    <Compile Include="Solutions\Euler037.cs" />
+    <Compile Include="Solutions\Euler038.cs" />
+    <Compile Include="Solutions\Euler039.cs" />
+    <Compile Include="Solutions\Euler040.cs" />
+    <Compile Include="Solutions\Euler041.cs" />
+    <Compile Include="Solutions\Euler042.cs" />
+    <Compile Include="Solutions\Euler043.cs" />
+    <Compile Include="Solutions\Euler044.cs" />
+    <Compile Include="Solutions\Euler045.cs" />
+    <Compile Include="Solutions\Euler046.cs" />
+    <Compile Include="Solutions\Euler047.cs" />
+    <Compile Include="Solutions\Euler048.cs" />
+    <Compile Include="Solutions\Euler049.cs" />
+    <Compile Include="Solutions\Euler050.cs" />
+    <Compile Include="Solutions\Euler051.cs" />
+    <Compile Include="Solutions\Euler052.cs" />
+    <Compile Include="Solutions\Euler053.cs" />
+    <Compile Include="Solutions\Euler054.cs" />
+    <Compile Include="Solutions\Euler055.cs" />
+    <Compile Include="Solutions\Euler056.cs" />
+    <Compile Include="Solutions\Euler057.cs" />
+    <Compile Include="Solutions\Euler058.cs" />
+    <Compile Include="Solutions\Euler059.cs" />
+    <Compile Include="Solutions\Euler060.cs" />
+    <Compile Include="Solutions\Euler061.cs" />
+    <Compile Include="Solutions\Euler062.cs" />
+    <Compile Include="Solutions\Euler063.cs" />
+    <Compile Include="Solutions\Euler064.cs" />
+    <Compile Include="Solutions\Euler065.cs" />
+    <Compile Include="Solutions\Euler067.cs" />
+    <Compile Include="IEuler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solutions\Euler069.cs" />
+    <Compile Include="Solutions\Euler071.cs" />
+    <Compile Include="Solutions\Euler074.cs" />
+    <Compile Include="Solutions\Euler076.cs" />
+    <Compile Include="Solutions\Euler079.cs" />
+    <Compile Include="Solutions\Euler081.cs" />
+    <Compile Include="Solutions\Euler082.cs" />
+    <Compile Include="Solutions\Euler083.cs" />
+    <Compile Include="Solutions\Euler089.cs" />
+    <Compile Include="Solutions\Euler092.cs" />
+    <Compile Include="Solutions\Euler096.cs" />
+    <Compile Include="Solutions\Euler097.cs" />
+    <Compile Include="Solutions\Euler099.cs" />
+    <Compile Include="Triangle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Input\Euler059.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler011.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler013.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler018.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler067.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler022.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler042.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler054.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler079.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler081.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler082.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler083.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler089.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler096.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\Euler099.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
