@@ -7,9 +7,8 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            var lines = File.ReadAllLines(FilePath("Euler011.txt"));
             var lineInd = 0;
-            foreach (var line in lines)
+            foreach (var line in InputLines)
             {
                 var colInd = 0;
                 foreach (var n in line.Split(' ').Select(int.Parse))

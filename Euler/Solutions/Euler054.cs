@@ -9,8 +9,7 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            return File.ReadAllLines(FilePath("Euler054.txt"))
-                .Select(l => l.Split(' '))
+            return InputLines.Select(l => l.Split(' '))
                 .Select(h => new {one = h.Take(5), two = h.Skip(5).Take(5)})
                 .Count(h => PlayerOneWins(SortHand(h.one), SortHand(h.two)));
         }

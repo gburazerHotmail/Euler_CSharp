@@ -39,7 +39,7 @@ namespace Euler.Solutions
 
         private void LoadBoards()
         {
-            var lines = File.ReadAllLines(FilePath("Euler096.txt"));
+            var lines = InputLines;
             for (var board = 0; board < N; board++)
                 for (var row = 0; row < 9; row++)
                     for (var col = 0; col < 9; col++)
@@ -90,12 +90,8 @@ namespace Euler.Solutions
             if (_availableSpots[board].Count == 0)
                 return false;
 
-            // TODO: MinBy()
-            var spot = _availableSpots[board].First();
-            foreach (var candidate in _availableSpots[board].Skip(1))
-                if (candidate.Available.Count < spot.Available.Count ||
-                    (candidate.Available.Count == spot.Available.Count && candidate.Linked.Count > spot.Linked.Count))
-                    spot = candidate;
+            var spot = _availableSpots[board].MinBy(s => s, Comparer<Spot>.Create((a, b) => a.Available.Count < b.Available.Count 
+                || (a.Available.Count == b.Available.Count && a.Linked.Count > b.Linked.Count) ? -1 : 1));
 
             var availableList = spot.Available.ToList();
             foreach (var n in availableList.Where(n => Place(board, spot, n)))

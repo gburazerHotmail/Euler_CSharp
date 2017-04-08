@@ -6,26 +6,18 @@ namespace Euler
 {
     class Triangle : Euler
     {
-        protected Triangle(string fileName)
-        {
-            FileName = fileName;
-        }
-
         public override long Exec()
         {
-            LoadTriangle(FilePath(FileName));
-            SumTriangle();
+            Load(InputLines);
+            Sum();
             return _triangle[0];
         }
-
-        private string FileName { get; set; }
 
         private static int[] _triangle;
         private static int _rowCount;
 
-        private static void LoadTriangle(string fileName)
+        private static void Load(string[] lines)
         {
-            var lines = File.ReadAllLines(fileName);
             _rowCount = lines.Length;
             _triangle = new int[TotalElements(_rowCount)];
             var ind = 0;
@@ -33,7 +25,7 @@ namespace Euler
                 _triangle[ind++] = int.Parse(num);
         }
 
-        private static void SumTriangle()
+        private static void Sum()
         {
             for (var row = _rowCount - 1; row >= 1; row--)
                 for (var col = 1; col <= row; col++)

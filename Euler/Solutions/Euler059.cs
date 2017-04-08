@@ -8,8 +8,8 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            var cipherText = new string(File.ReadAllText(FilePath("Euler059.txt"))
-                .Split(',').Select(int.Parse).Select(c => (char) c).ToArray());
+            var cipherText = new string(InputText.Split(',')
+                .Select(int.Parse).Select(c => (char) c).ToArray());
 
             return ValidChars().SelectMany(c1 =>
                 ValidChars().SelectMany(c2 =>

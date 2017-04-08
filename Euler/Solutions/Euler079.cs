@@ -9,7 +9,7 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            var list = File.ReadAllLines(FilePath("Euler079.txt")).Select(l => l.ToCharArray()).ToArray();
+            var list = InputLines.Select(l => l.ToCharArray()).ToArray();
             _new.Add(new LinkedList<char>(list.First()));
             foreach (var n in list.Skip(1))
             {

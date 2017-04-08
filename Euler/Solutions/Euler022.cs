@@ -8,8 +8,7 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            var names = new List<string>(File.ReadAllText(FilePath("Euler022.txt"))
-                .Replace("\"", "").Split(','));
+            var names = new List<string>(InputText.Replace("\"", "").Split(','));
             names.Sort(AlphabeticalCompare);
             return names.Select((t, i) => (i + 1)*t
                 .Aggregate<char, long>(0, (current, c) => current + (c - 'A' + 1)))

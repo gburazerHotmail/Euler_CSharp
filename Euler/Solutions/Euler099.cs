@@ -12,8 +12,7 @@ namespace Euler.Solutions
             var maxInd = 0;
             var maxBase = 1;
             var maxExp = 0;
-            foreach (var pair in File.ReadAllLines(FilePath("Euler099.txt"))
-                .Select(l => l.Split(','))
+            foreach (var pair in InputLines.Select(l => l.Split(','))
                 .Select(p => new {Base = int.Parse(p[0]), Exp = int.Parse(p[1])}))
             {
                 ind++;

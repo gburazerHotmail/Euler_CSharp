@@ -9,8 +9,7 @@ namespace Euler.Solutions
     {
         public override long Exec()
         {
-            return File.ReadAllLines(FilePath("Euler089.txt"))
-                .Select(r => r.Length - Arabic2Roman(Roman2Arabic(r)).Length)
+            return InputLines.Select(r => r.Length - Arabic2Roman(Roman2Arabic(r)).Length)
                 .Sum();
         }
 

@@ -2,8 +2,9 @@
 {
     class Euler067 : Triangle
     {
-        public Euler067() : base("Euler067.txt")
+        public override long Exec()
         {
+            return base.Exec();
         }
     }
 }

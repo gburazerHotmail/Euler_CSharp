@@ -10,8 +10,7 @@ namespace Euler.Solutions
         public override long Exec()
         {
             PrecalcTn();
-            return File.ReadAllText(FilePath("Euler042.txt"))
-                .Split(new[] { ',' })
+            return InputText.Split(new[] { ',' })
                 .Count(word => IsTriangleWord(word.Skip(1).Take(word.Length - 2).ToArray()));
         }
         private const int Limit = 100;
