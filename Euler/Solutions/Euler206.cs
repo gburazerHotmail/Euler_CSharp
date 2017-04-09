@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Euler.Solutions
 {
@@ -7,7 +8,16 @@ namespace Euler.Solutions
     {
         public long Exec()
         {
-            return Enumerable.Range(Min, int.MaxValue - Min).First(n => IsMatch((long)n * n));
+            var res = 0L;
+            Parallel.For(Min, Max, (n, loopState) => 
+            {
+                if (IsMatch((long)n*n))
+                {
+                    res = n;
+                    loopState.Stop();
+                }
+            });
+            return res;
         }
 
         private static bool IsMatch(long n)
@@ -20,7 +30,12 @@ namespace Euler.Solutions
         }
 
         private static readonly string Mask = "1_2_3_4_5_6_7_8_9_0";
-        private static readonly int Min = (int) Math.Floor(Math.Sqrt(long.Parse(Mask.Replace("_", "0"))));
         private static readonly long[] Digits = Mask.Split('_').Select(d => long.Parse(d)).Reverse().ToArray();
+
+        private static Func<Func<double, double>, string, int> CalcBoundary = 
+            (op, d) => (int)op(Math.Sqrt(long.Parse(Mask.Replace("_", d))));
+
+        private static readonly int Min = CalcBoundary(Math.Floor, "0");
+        private static readonly int Max = CalcBoundary(Math.Ceiling, "9");
     }
 }
