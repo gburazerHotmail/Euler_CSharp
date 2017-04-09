@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,10 +9,15 @@ namespace Euler.Solutions
     {
         public long Exec()
         {
+            var candidates = new List<int>();
+            for (var i = Min; i <= Max; i += 10)
+                candidates.Add(i);
+
             var res = 0L;
-            Parallel.For(Min, Max, (n, loopState) => 
+            Parallel.ForEach(candidates, (n, loopState) =>
             {
-                if (IsMatch((long)n*n))
+                var sqr = (long)n * n;
+                if (sqr % 1000 == 900 && IsMatch(sqr))
                 {
                     res = n;
                     loopState.Stop();
