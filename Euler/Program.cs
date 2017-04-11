@@ -97,7 +97,10 @@ namespace Euler
 
         private static void SolveAndWriteStatus(int problemId, long expected)
         {
-            Console.Write("{0,3}", problemId);
+            const string eulerLink = "https://projecteuler.net/problem=";
+            var format = String.Format("{0},{1}", "{0", -(eulerLink.Length + 3) + "}");
+            Console.Write(format, String.Format("{0}{1}", eulerLink, problemId));
+
             var actual = -1L;
             var type = Type.GetType("Euler.Solutions.Euler" + problemId.ToString("D3"));
             Sw.Restart();
