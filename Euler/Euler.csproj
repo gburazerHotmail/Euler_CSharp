@@ -129,6 +129,7 @@
     <Compile Include="Solutions\Euler097.cs" />
     <Compile Include="Solutions\Euler099.cs" />
     <Compile Include="Solutions\Euler206.cs" />
+    <Compile Include="Solutions\Euler357.cs" />
     <Compile Include="Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
