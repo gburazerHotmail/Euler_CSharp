@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Euler.Solutions
 {
@@ -7,11 +8,14 @@ namespace Euler.Solutions
         public override long Exec()
         {
             CalcPrimes(100000000);
-            return Primes.Aggregate(0L, (res, p) => res + (Satisfies(p - 1) ? p - 1 : 0));
+            return 1 + Primes.AsParallel().Select(p => Satisfies(p - 1) ? p - 1 : 0L).Sum();
         }
 
         private bool Satisfies(int n)
         {
+            if (n % 4 != 2)
+                return false;
+
             for (var d = 2; d * d <= n; d++)
                 if (n % d == 0 && !IsPrimeUsingPrimes(d + n / d))
                     return false;
