@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Diagnostics;
+using System;
 
 namespace Euler
 {
@@ -61,7 +62,7 @@ namespace Euler
         protected static int PrimeSieveLimit { get; private set; }
         protected static bool[] NotPrime { get; private set; }
         protected static List<int> Primes { get; private set; }
-        protected static List<int> OddPrimes { get; private set; } 
+        protected static Lazy<List<int>> OddPrimes = new Lazy<List<int>>(() => Primes.Skip(1).ToList());
 
         protected static void SievePrimes(int primeSieveLimit)
         {
@@ -81,14 +82,15 @@ namespace Euler
                 .Select((notPrime, ind) => new {notPrime, ind})
                 .Where(el => !el.notPrime)
                 .Select(el => el.ind));
-            OddPrimes = Primes.Skip(1).ToList();
         }
 
         protected static bool IsPrime(long n)
         {
+            if (n == 2)
+                return true;
             if (n < 2 || n % 2 == 0)
                 return false;
-            for (var i = 3; i * i <= n; i += 2)
+            for (var i = 3L; i * i <= n; i += 2)
                 if (n % i == 0)
                     return false;
             return true;

@@ -17,7 +17,7 @@ namespace Euler.Solutions
         private static int Solve(int ind, int level)
         {
             if (level == N)
-                return Enumerable.Range(0, N).Select(i => OddPrimes[TestInd[i]]).Sum();
+                return Enumerable.Range(0, N).Select(i => OddPrimes.Value[TestInd[i]]).Sum();
             for (var newInd = ind + 1; newInd < MaxPrimeInd - N + level + 1; newInd++)
             {
                 TestInd[level] = newInd;
@@ -37,7 +37,7 @@ namespace Euler.Solutions
         private static bool IsPrime(int ind1, int ind2)
         {
             return IsPrimeUsingPrimes(int.Parse(
-                OddPrimes[TestInd[ind1]].ToString() + OddPrimes[TestInd[ind2]]));
+                OddPrimes.Value[TestInd[ind1]].ToString() + OddPrimes.Value[TestInd[ind2]]));
         }
     }
 }
